@@ -1,0 +1,168 @@
+@import "../../stylus/main.styl"
+
+
+
+.AppContainer
+  position relative
+  
+  display flex
+  
+  flex-direction column
+  
+  width 100%
+  height 100%
+  
+  background-color #1f1f1f
+  
+  color #efefef
+  
+  font-family ubuntu-font
+  font-size 14px
+  font-weight 400
+  
+  overflow-y auto
+
+.AppBody
+  display flex
+  
+  flex 1 0 auto
+  flex-direction column
+  
+  h1
+    padding 16px 8px
+    
+    text-align center
+  
+  .AppLogo
+    display block
+    
+    flex 0 0 auto
+  
+
+
+
+
+// List, and deeper
+
+.albumList
+  display flex
+  
+  flex-wrap wrap
+  
+  padding 16px 0 16px 16px
+
+.albumListItem
+  position relative
+  
+  display flex
+  
+  flex 1 1 320px
+  
+  margin 0 16px 16px 0
+  padding 0
+
+  width 320px
+  
+  background-color #2f2f2f
+  
+  border-radius 8px
+  
+  box-shadow 0px 2px 0 2px #070707
+  
+  cursor pointer
+  
+  transition box-shadow 0.3333s ease-in-out
+  
+  &:hover
+    box-shadow 0px 2px 0 2px #dfdfdf
+    
+    .albumCoverInner
+      transform rotateZ(0.01deg) scale(1.125, 1.125)
+
+.albumCover
+  flex 0 0 auto
+
+  height 160px
+  width 160px
+  
+  overflow hidden
+  
+  background-color #070707
+  
+  border-radius 8px 0 0 8px
+  
+.albumCoverInner
+  height 160px
+  width 160px
+  
+  background-position 50% 50%
+  background-repeat no-repeat
+  background-size cover
+  
+  transform rotateZ(0.01deg) scale(1, 1)
+  
+  transition transform 0.3333s ease-in-out
+
+.albumInfo
+  flex 1 1 auto
+  
+  padding 12px
+
+  height 160px
+  
+  min-width 0
+  
+  overflow hidden
+  
+  background-image linear-gradient(112.5deg, rgba(7, 7, 7, 1) 0px, rgba(7, 7, 7, 1) 62px, rgba(7, 7, 7, 0) 100%)
+  background-position 50% 50%
+  background-repeat no-repeat
+  background-size cover
+  
+  h3    
+    padding 0 0 12px
+  
+    overflow hidden
+    
+    text-overflow ellipsis
+
+    white-space nowrap
+    
+  p
+    margin 0
+    
+    color rgba(230, 230, 230, 0)
+
+    font-weight 400
+    font-style italic
+    
+    background-image linear-gradient(to bottom, rgba(230, 230, 230, 1) 0px, rgba(230, 230, 230, 1) 80px, rgba(230, 230, 230, 0) 108px)
+    -webkit-background-clip text
+    background-clip text
+    
+  .subdued
+    opacity 0.6667
+
+.numSpot
+  position absolute
+  right 0
+  bottom 0
+  
+  padding 0 4px
+  
+  height 16px
+  
+  min-width 16px
+  
+  background-color #dfdfdf
+  
+  color #2f2f2f
+  
+  font-weight 700
+  
+  line-height 16px
+  
+  text-align center
+  
+  border-radius 8px 0 8px 0
+  
